@@ -1,4 +1,10 @@
 <?php
+// Parking Management System
+// Author: Rashid Noor
+// Module: Dashboard / Entry Point
+// Description: Handles main navigation and parking overview
+
+
 session_start();
 include 'connection.php';
 if(isset($_REQUEST['login_btn']))
