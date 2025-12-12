@@ -103,5 +103,4 @@ if(isset($_POST['sv-cat'])) {
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
 <?php include('include/footer.php'); ?>
