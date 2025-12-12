@@ -1,19 +1,17 @@
 <?php
-$server="localhost";
-$username="root";
-$password="";
-$databasename="pms_db";
+$server = "localhost";
+$username = "root";
+$password = "";
+$databasename = "pms_db";
 
-$conn = mysqli_connect($server, $username, $password);
+// Connect to the database directly
+$conn = mysqli_connect($server, $username, $password, $databasename);
 
-$abc=mysqli_select_db($conn,$databasename);
-
-if(!$abc)
-{
-	die("disconnect");
+// Check if connection failed
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
-else
-{
-	//die ("successfull");
-}
+
+// Set character set to utf8mb4 (handles special characters/emojis correctly)
+mysqli_set_charset($conn, "utf8mb4");
 ?>
